@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Windows.Automation;
 
-namespace MuteMonitor
+namespace TeamsMuteMonitor
 {
     class Program
     {
