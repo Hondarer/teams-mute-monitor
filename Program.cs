@@ -10,15 +10,12 @@ namespace MuteMonitor
 
         private static readonly Condition ButtonCondition =
             new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
-        private static readonly Condition VisibleCondition =
-            new PropertyCondition(AutomationElement.IsOffscreenProperty, false);
         private static readonly Condition MicEnabledLabelsCondition = new OrCondition(
             new PropertyCondition(AutomationElement.NameProperty, "mute: マイク"),
             new PropertyCondition(AutomationElement.NameProperty, "マイクのミュート")
         );
         private static readonly Condition CheckMicEnabledCondition = new AndCondition(
             ButtonCondition,
-            VisibleCondition,
             MicEnabledLabelsCondition
         );
 
